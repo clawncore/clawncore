@@ -1,6 +1,4 @@
 import React, { createContext, useContext, useEffect, useState } from 'react';
-import { useAuth } from '@/hooks/useAuth';
-import { apiRequest } from '@/lib/queryClient';
 
 type Theme = 'light' | 'dark';
 
@@ -13,20 +11,15 @@ interface ThemeContextType {
 const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
 
 export function ThemeProvider({ children }: { children: React.ReactNode }) {
-  const { user, isAuthenticated } = useAuth();
   const [theme, setTheme] = useState<Theme>('dark');
   const [isLoading, setIsLoading] = useState(true);
 
-  // Load theme from user preferences or localStorage
+  // Load theme from localStorage
   useEffect(() => {
-    if (isAuthenticated && user) {
-      setTheme((user.theme as Theme) || 'dark');
-    } else {
-      const savedTheme = localStorage.getItem('theme') as Theme;
-      setTheme(savedTheme || 'dark');
-    }
+    const savedTheme = localStorage.getItem('theme') as Theme;
+    setTheme(savedTheme || 'dark');
     setIsLoading(false);
-  }, [user, isAuthenticated]);
+  }, []);
 
   // Apply theme to document
   useEffect(() => {
@@ -38,19 +31,10 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
     }
   }, [theme]);
 
-  const toggleTheme = async () => {
+  const toggleTheme = () => {
     const newTheme = theme === 'light' ? 'dark' : 'light';
     setTheme(newTheme);
-
-    if (isAuthenticated) {
-      try {
-        await apiRequest('PATCH', '/api/auth/user/theme', { theme: newTheme });
-      } catch (error) {
-        console.error('Failed to update theme in user preferences:', error);
-      }
-    } else {
-      localStorage.setItem('theme', newTheme);
-    }
+    localStorage.setItem('theme', newTheme);
   };
 
   return (
