@@ -1,30 +1,31 @@
 import React, { useState } from 'react';
-import { useLocation } from 'wouter';
+import { useLocation, Link } from 'wouter';
 import { ThemeToggle } from '@/components/ui/theme-toggle';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import { Menu } from 'lucide-react';
 
 const navigation = [
-  { name: 'Home', href: '#home' },
-  { name: 'About', href: '#about' },
-  { name: 'Services', href: '#services' },
-  { name: 'Clawn AI', href: '#clawn-ai' },
-  { name: 'Agriculture', href: '#agriculture' },
-  { name: 'Cloud', href: '#cloud' },
-  { name: 'Cybersecurity', href: '#cybersecurity' },
-  { name: 'Vision & Mission', href: '#vision' },
-  { name: 'Contact', href: '#contact' },
+  { name: 'Home', href: '#home', type: 'scroll' },
+  { name: 'About', href: '#about', type: 'scroll' },
+  { name: 'Services', href: '#services', type: 'scroll' },
+  { name: 'Agriculture', href: '/agriculture', type: 'route' },
+  { name: 'Cloud', href: '/cloud', type: 'route' },
+  { name: 'Cybersecurity', href: '/cybersecurity', type: 'route' },
+  { name: 'Clawn AI', href: '#clawn-ai', type: 'scroll' },
+  { name: 'Contact', href: '#contact', type: 'scroll' },
 ];
 
 export function Header() {
   const [location] = useLocation();
   const [isOpen, setIsOpen] = useState(false);
 
-  const scrollToSection = (href: string) => {
-    const element = document.querySelector(href);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+  const handleNavigation = (item: any) => {
+    if (item.type === 'scroll') {
+      const element = document.querySelector(item.href);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
     }
     setIsOpen(false);
   };
@@ -56,13 +57,21 @@ export function Header() {
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center space-x-8">
           {navigation.map((item) => (
-            <button
-              key={item.name}
-              onClick={() => scrollToSection(item.href)}
-              className="text-sm font-medium hover:text-purple-600 transition-colors"
-            >
-              {item.name}
-            </button>
+            item.type === 'route' ? (
+              <Link key={item.name} href={item.href}>
+                <button className="text-sm font-medium hover:text-purple-600 transition-colors">
+                  {item.name}
+                </button>
+              </Link>
+            ) : (
+              <button
+                key={item.name}
+                onClick={() => handleNavigation(item)}
+                className="text-sm font-medium hover:text-purple-600 transition-colors"
+              >
+                {item.name}
+              </button>
+            )
           ))}
         </nav>
 
@@ -80,13 +89,24 @@ export function Header() {
             <SheetContent side="right" className="w-[300px] sm:w-[400px]">
               <nav className="flex flex-col space-y-4">
                 {navigation.map((item) => (
-                  <button
-                    key={item.name}
-                    onClick={() => scrollToSection(item.href)}
-                    className="text-left text-sm font-medium hover:text-purple-600 transition-colors"
-                  >
-                    {item.name}
-                  </button>
+                  item.type === 'route' ? (
+                    <Link key={item.name} href={item.href}>
+                      <button 
+                        onClick={() => setIsOpen(false)}
+                        className="text-left text-sm font-medium hover:text-purple-600 transition-colors w-full"
+                      >
+                        {item.name}
+                      </button>
+                    </Link>
+                  ) : (
+                    <button
+                      key={item.name}
+                      onClick={() => handleNavigation(item)}
+                      className="text-left text-sm font-medium hover:text-purple-600 transition-colors"
+                    >
+                      {item.name}
+                    </button>
+                  )
                 ))}
               </nav>
             </SheetContent>
