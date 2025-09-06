@@ -1,8 +1,8 @@
 import React from 'react';
-import { Header } from '@/components/Header';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { ThemeToggle } from '@/components/ui/theme-toggle';
-import { useTheme } from '@/contexts/ThemeContext';
+import { Header } from '../components/Header';
+import { Card, CardContent, CardHeader, CardTitle } from '../components/ui/card';
+import { ThemeToggle } from '../components/ui/theme-toggle';
+import { useTheme } from '../contexts/ThemeContext';
 import { Settings, Palette } from 'lucide-react';
 
 export default function Profile() {

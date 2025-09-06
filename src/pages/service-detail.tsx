@@ -1,9 +1,9 @@
 import React from 'react';
 import { useRoute } from 'wouter';
-import { Header } from '@/components/Header';
-import { Footer } from '@/components/Footer';
-import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Header } from '../components/Header';
+import { Footer } from '../components/Footer';
+import { Button } from '../components/ui/button';
+import { Card, CardContent, CardHeader, CardTitle } from '../components/ui/card';
 import { ArrowLeft, CheckCircle } from 'lucide-react';
 import { Link } from 'wouter';
 

@@ -1,10 +1,14 @@
 import React from 'react';
-import { Header } from '@/components/Header';
-import { Footer } from '@/components/Footer';
-import { Button } from '@/components/ui/button';
-import { Card, CardContent } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
+import { Header } from '../components/Header';
+import { Footer } from '../components/Footer';
+import { Button } from '../components/ui/button';
+import { Card, CardContent } from '../components/ui/card';
 import { ArrowRight, Sprout, Droplets, Zap, BarChart3, Satellite, Shield, Cpu, Cloud } from 'lucide-react';
+
+// Temporary local Badge fix for children prop
+const LocalBadge = ({ className, children, ...props }) => (
+  <div className={className} {...props}>{children}</div>
+);
 
 export default function Agriculture() {
   const solutions = [
@@ -56,9 +60,9 @@ export default function Agriculture() {
         <div className="container mx-auto px-4 relative">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
-              <Badge className="mb-4 bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200">
+              <LocalBadge className="mb-4 bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200">
                 Agriculture Technology
-              </Badge>
+              </LocalBadge>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
                 <span className="bg-gradient-to-r from-green-600 via-emerald-600 to-teal-600 bg-clip-text text-transparent">
                   Smart Agriculture
@@ -168,9 +172,9 @@ export default function Agriculture() {
 
           <div className="flex flex-wrap justify-center gap-4">
             {technologies.map((tech, index) => (
-              <Badge key={index} variant="secondary" className="px-4 py-2 text-sm">
+              <LocalBadge key={index} variant="secondary" className="px-4 py-2 text-sm">
                 {tech}
-              </Badge>
+              </LocalBadge>
             ))}
           </div>
         </div>
