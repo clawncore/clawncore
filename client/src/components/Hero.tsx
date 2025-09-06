@@ -65,7 +65,7 @@ export function Hero() {
       <div className="container mx-auto px-4 py-20">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left Side: Slideshow */}
-          <div className="relative h-96 lg:h-[500px] rounded-2xl overflow-hidden">
+          <div className="relative h-[400px] md:h-[500px] lg:h-[600px] xl:h-[700px] rounded-2xl overflow-hidden">
             {slideImages.map((image, index) => (
               <div
                 key={index}
@@ -86,11 +86,22 @@ export function Hero() {
           {/* Right Side: Content */}
           <div className="space-y-8">
             {/* Logo Display */}
-            <div className="flex items-center space-x-3 mb-6">
-              <div className="w-12 h-12 bg-gradient-to-br from-purple-600 to-pink-600 rounded-xl flex items-center justify-center">
-                <div className="w-6 h-6 bg-white rounded-full opacity-90" />
+            <div className="flex items-center space-x-4 mb-6">
+              <img 
+                src="/attached_assets/jpeg_1757144655001.jpeg" 
+                alt="ClawnCore Logo" 
+                className="w-16 h-16 md:w-20 md:h-20 object-contain"
+                style={{ background: 'transparent' }}
+                onError={(e) => {
+                  // Fallback to gradient logo if image fails to load
+                  (e.currentTarget as HTMLImageElement).style.display = 'none';
+                  ((e.currentTarget.nextElementSibling as HTMLElement)).style.display = 'flex';
+                }}
+              />
+              <div className="w-16 h-16 md:w-20 md:h-20 bg-gradient-to-br from-purple-600 to-pink-600 rounded-xl flex items-center justify-center" style={{ display: 'none' }}>
+                <div className="w-8 h-8 md:w-10 md:h-10 bg-white rounded-full opacity-90" />
               </div>
-              <span className="text-2xl font-bold bg-gradient-to-r from-purple-600 via-pink-600 to-blue-600 bg-clip-text text-transparent">
+              <span className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-purple-600 via-pink-600 to-blue-600 bg-clip-text text-transparent">
                 ClawnCore
               </span>
             </div>

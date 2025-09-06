@@ -54,7 +54,7 @@ export function Testimonials() {
                   <img 
                     src={testimonial.image} 
                     alt={testimonial.name} 
-                    className="w-10 h-10 rounded-full object-cover"
+                    className="w-12 h-12 md:w-14 md:h-14 rounded-full object-cover"
                   />
                   <div>
                     <p className="font-semibold text-sm" data-testid={`text-name-${index}`}>

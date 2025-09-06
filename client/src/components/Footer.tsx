@@ -26,9 +26,20 @@ export function Footer() {
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           {/* Company Info */}
           <div className="space-y-4">
-            <div className="flex items-center space-x-2">
-              <div className="w-8 h-8 bg-gradient-to-br from-purple-600 to-pink-600 rounded-lg flex items-center justify-center">
-                <div className="w-4 h-4 bg-white rounded-full opacity-90" />
+            <div className="flex items-center space-x-3">
+              <img 
+                src="/attached_assets/jpeg_1757144655001.jpeg" 
+                alt="ClawnCore Logo" 
+                className="w-10 h-10 md:w-12 md:h-12 object-contain"
+                style={{ background: 'transparent' }}
+                onError={(e) => {
+                  // Fallback to gradient logo if image fails to load
+                  (e.currentTarget as HTMLImageElement).style.display = 'none';
+                  ((e.currentTarget.nextElementSibling as HTMLElement)).style.display = 'flex';
+                }}
+              />
+              <div className="w-10 h-10 md:w-12 md:h-12 bg-gradient-to-br from-purple-600 to-pink-600 rounded-lg flex items-center justify-center" style={{ display: 'none' }}>
+                <div className="w-5 h-5 md:w-6 md:h-6 bg-white rounded-full opacity-90" />
               </div>
               <span className="text-xl font-bold bg-gradient-to-r from-purple-600 via-pink-600 to-blue-600 bg-clip-text text-transparent">
                 ClawnCore

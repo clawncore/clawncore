@@ -39,9 +39,9 @@ export function About() {
           </div>
           <div className="rounded-2xl overflow-hidden">
             <img 
-              src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400" 
+              src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=800" 
               alt="Technology innovation lab" 
-              className="w-full h-80 object-cover"
+              className="w-full h-[300px] md:h-[400px] lg:h-[500px] object-cover"
             />
           </div>
         </div>
@@ -54,9 +54,9 @@ export function About() {
 
         <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
           <div className="group p-6 bg-card rounded-2xl border border-border hover:border-purple-600/50 transition-all duration-300 transform hover:scale-105">
-            <div className="w-24 h-24 rounded-full overflow-hidden mx-auto mb-4">
+            <div className="w-32 h-32 md:w-36 md:h-36 rounded-full overflow-hidden mx-auto mb-4">
               <img 
-                src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&h=150" 
+                src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=300" 
                 alt="Simbisai Chinhema" 
                 className="w-full h-full object-cover"
               />
@@ -70,9 +70,9 @@ export function About() {
           </div>
 
           <div className="group p-6 bg-card rounded-2xl border border-border hover:border-pink-600/50 transition-all duration-300 transform hover:scale-105">
-            <div className="w-24 h-24 rounded-full overflow-hidden mx-auto mb-4">
+            <div className="w-32 h-32 md:w-36 md:h-36 rounded-full overflow-hidden mx-auto mb-4">
               <img 
-                src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&h=150" 
+                src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=300" 
                 alt="Craig Marowa" 
                 className="w-full h-full object-cover"
               />

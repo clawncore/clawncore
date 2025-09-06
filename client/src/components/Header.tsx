@@ -37,7 +37,7 @@ export function Header() {
           <img 
             src="/attached_assets/jpeg_1757144655001.jpeg" 
             alt="ClawnCore Logo" 
-            className="w-10 h-10 object-contain"
+            className="w-12 h-12 md:w-14 md:h-14 object-contain"
             style={{ background: 'transparent' }}
             onError={(e) => {
               // Fallback to gradient logo if image fails to load

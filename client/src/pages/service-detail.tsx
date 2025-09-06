@@ -269,7 +269,7 @@ export default function ServiceDetail() {
               <img 
                 src={service.image} 
                 alt={service.title} 
-                className="w-full h-80 lg:h-96 object-cover"
+                className="w-full h-[400px] md:h-[500px] lg:h-[600px] object-cover"
               />
             </div>
           </div>
