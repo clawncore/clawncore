@@ -28,7 +28,7 @@ export function Footer() {
           <div className="space-y-4">
             <div className="flex items-center space-x-3">
               <img 
-                src="/attached_assets/jpeg_1757144655001.jpeg" 
+                src="/attached_assets/jpeg (1)_1757147128009.jpeg" 
                 alt="ClawnCore Logo" 
                 className="w-10 h-10 md:w-12 md:h-12 object-contain"
                 style={{ background: 'transparent' }}

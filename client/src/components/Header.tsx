@@ -32,13 +32,14 @@ export function Header() {
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="container mx-auto flex h-16 items-center justify-between px-4">
+      <div className="container mx-auto flex h-16 md:h-20 items-center justify-between px-4 md:px-6">
         {/* Logo */}
-        <div className="flex items-center space-x-3">
+        <Link href="/">
+          <div className="flex items-center space-x-3 cursor-pointer">
           <img 
-            src="/attached_assets/jpeg_1757144655001.jpeg" 
+            src="/attached_assets/jpeg (1)_1757147128009.jpeg" 
             alt="ClawnCore Logo" 
-            className="w-12 h-12 md:w-14 md:h-14 object-contain"
+            className="w-10 h-10 sm:w-12 sm:h-12 md:w-16 md:h-16 object-contain"
             style={{ background: 'transparent' }}
             onError={(e) => {
               // Fallback to gradient logo if image fails to load
@@ -49,13 +50,14 @@ export function Header() {
           <div className="w-10 h-10 bg-gradient-to-br from-purple-600 to-pink-600 rounded-lg flex items-center justify-center" style={{ display: 'none' }}>
             <div className="w-5 h-5 bg-white rounded-full opacity-90" />
           </div>
-          <span className="text-xl font-bold bg-gradient-to-r from-purple-600 via-pink-600 to-blue-600 bg-clip-text text-transparent">
+          <span className="text-lg sm:text-xl md:text-2xl font-bold bg-gradient-to-r from-purple-600 via-pink-600 to-blue-600 bg-clip-text text-transparent">
             ClawnCore
           </span>
-        </div>
+          </div>
+        </Link>
 
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex items-center space-x-8">
+        <nav className="hidden lg:flex items-center space-x-6 xl:space-x-8">
           {navigation.map((item) => (
             item.type === 'route' ? (
               <Link key={item.name} href={item.href}>
@@ -67,7 +69,7 @@ export function Header() {
               <button
                 key={item.name}
                 onClick={() => handleNavigation(item)}
-                className="text-sm font-medium hover:text-purple-600 transition-colors"
+                className="text-sm xl:text-base font-medium hover:text-purple-600 transition-colors"
               >
                 {item.name}
               </button>
@@ -82,12 +84,23 @@ export function Header() {
           {/* Mobile Menu */}
           <Sheet open={isOpen} onOpenChange={setIsOpen}>
             <SheetTrigger asChild>
-              <Button variant="ghost" size="sm" className="md:hidden" data-testid="button-mobile-menu">
-                <Menu className="h-4 w-4" />
+              <Button variant="ghost" size="sm" className="lg:hidden" data-testid="button-mobile-menu">
+                <Menu className="h-5 w-5" />
               </Button>
             </SheetTrigger>
-            <SheetContent side="right" className="w-[300px] sm:w-[400px]">
-              <nav className="flex flex-col space-y-4">
+            <SheetContent side="right" className="w-[280px] sm:w-[350px] md:w-[400px]">
+              <div className="flex items-center space-x-3 mb-8">
+                <img 
+                  src="/attached_assets/jpeg (1)_1757147128009.jpeg" 
+                  alt="ClawnCore Logo" 
+                  className="w-8 h-8 object-contain"
+                  style={{ background: 'transparent' }}
+                />
+                <span className="text-lg font-bold bg-gradient-to-r from-purple-600 via-pink-600 to-blue-600 bg-clip-text text-transparent">
+                  ClawnCore
+                </span>
+              </div>
+              <nav className="flex flex-col space-y-6">
                 {navigation.map((item) => (
                   item.type === 'route' ? (
                     <Link key={item.name} href={item.href}>
