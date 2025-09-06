@@ -37,7 +37,7 @@ export function Header() {
         <Link href="/">
           <div className="flex items-center space-x-3 cursor-pointer">
           <img 
-            src="/attached_assets/jpeg (1)_1757147128009.jpeg" 
+            src="/attached_assets/jpeg (1)_1757147457432.jpeg" 
             alt="ClawnCore Logo" 
             className="w-10 h-10 sm:w-12 sm:h-12 md:w-16 md:h-16 object-contain"
             style={{ background: 'transparent' }}
@@ -91,7 +91,7 @@ export function Header() {
             <SheetContent side="right" className="w-[280px] sm:w-[350px] md:w-[400px]">
               <div className="flex items-center space-x-3 mb-8">
                 <img 
-                  src="/attached_assets/jpeg (1)_1757147128009.jpeg" 
+                  src="/attached_assets/jpeg (1)_1757147457432.jpeg" 
                   alt="ClawnCore Logo" 
                   className="w-8 h-8 object-contain"
                   style={{ background: 'transparent' }}
