@@ -41,8 +41,8 @@ export function Header() {
             style={{ background: 'transparent' }}
             onError={(e) => {
               // Fallback to gradient logo if image fails to load
-              e.currentTarget.style.display = 'none';
-              e.currentTarget.nextElementSibling!.style.display = 'flex';
+              (e.currentTarget as HTMLImageElement).style.display = 'none';
+              ((e.currentTarget.nextElementSibling as HTMLElement)).style.display = 'flex';
             }}
           />
           <div className="w-10 h-10 bg-gradient-to-br from-purple-600 to-pink-600 rounded-lg flex items-center justify-center" style={{ display: 'none' }}>
