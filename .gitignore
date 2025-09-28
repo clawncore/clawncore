@@ -1,6 +1,36 @@
+# Dependencies
 node_modules
-dist
+
+# Build outputs
+/dist
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# Logs
+logs
+*.log
+
+# Runtime data
+pids
+*.pid
+*.seed
+
+# IDE and editor files
 .DS_Store
-server/public
+*.swp
+*.swo
+
+# OS generated files
+Thumbs.db
+
+# Vite files
 vite.config.ts.*
+
+# Archive files
 *.tar.gz
+
+# Ignore public folder in server (it's generated during build)
+server/public

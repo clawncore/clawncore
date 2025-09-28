@@ -1,0 +1,66 @@
+name: Deploy to Production
+
+on:
+  push:
+    branches: [ main, production ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    strategy:
+      matrix:
+        node-version: [18.x, 20.x]
+    
+    steps:
+    - uses: actions/checkout@v3
+    
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v3
+      with:
+        node-version: ${{ matrix.node-version }}
+        cache: 'npm'
+    
+    - name: Install dependencies
+      run: npm ci
+    
+    - name: Run tests
+      run: |
+        npm run test:deploy
+      env:
+        CI: true
+    
+    - name: Build
+      run: npm run build
+    
+    - name: Archive production artifacts
+      uses: actions/upload-artifact@v3
+      with:
+        name: production-files
+        path: |
+          dist
+          server
+          shared
+          package.json
+          .env.example
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/production'
+    
+    steps:
+    - uses: actions/checkout@v3
+    
+    - name: Download production artifacts
+      uses: actions/download-artifact@v3
+      with:
+        name: production-files
+    
+    - name: Deploy to server
+      run: |
+        echo "Deploying to production server..."
+        # Add your deployment commands here
+        # For example, using rsync, scp, or a deployment tool
