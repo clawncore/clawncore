@@ -1,16 +1,16 @@
 #!/usr/bin/env node
 
 // Simple build script for deployment
-const { execSync } = require('child_process');
-const fs = require('fs');
-const path = require('path');
+import { execSync } from 'child_process';
+import fs from 'fs';
+import path from 'path';
 
 console.log('Starting build process...');
 
 try {
   // Clean previous builds
   console.log('Cleaning previous builds...');
-  const distPath = path.join(__dirname, '..', 'dist');
+  const distPath = path.join(import.meta.dirname, '..', 'dist');
   if (fs.existsSync(distPath)) {
     fs.rmSync(distPath, { recursive: true });
   }

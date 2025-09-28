@@ -10,7 +10,7 @@
     "build:deploy": "node scripts/build.js",
     "test:deploy": "node scripts/test-deployment.js",
     "test:contact": "node scripts/test-contact-form.js",
-    "start": "NODE_ENV=production node start-server.cjs",
+    "start": "node start-server.cjs",
     "preview": "vite preview"
   },
   "dependencies": {

@@ -5,7 +5,7 @@ const { spawn } = require('child_process');
 const isProduction = process.env.NODE_ENV === 'production';
 
 // Start the server with tsx
-const server = spawn('npx', [isProduction ? 'tsx' : 'tsx', 'server/index.ts'], {
+const server = spawn('tsx', ['server/index.ts'], {
     env: {
         ...process.env,
         NODE_ENV: process.env.NODE_ENV || 'development',
