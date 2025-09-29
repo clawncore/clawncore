@@ -1,0 +1,120 @@
+/* Responsive styles for mobile devices */
+@media (max-width: 768px) {
+  /* Adjust video player for mobile */
+  .video-player-container {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  /* Adjust header elements for mobile */
+  .mobile-header-spacing {
+    padding-top: 4rem;
+  }
+  
+  /* Adjust section padding for mobile */
+  section {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+  
+  /* Adjust font sizes for mobile */
+  h1 {
+    font-size: 1.75rem;
+  }
+  
+  h2 {
+    font-size: 1.5rem;
+  }
+  
+  h3 {
+    font-size: 1.25rem;
+  }
+  
+  /* Adjust button sizes for mobile */
+  .btn-mobile {
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
+  }
+  
+  /* Adjust card layouts for mobile */
+  .card-mobile {
+    margin-bottom: 1rem;
+  }
+  
+  /* Adjust navigation for mobile */
+  .nav-mobile {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  /* Adjust form elements for mobile */
+  .form-mobile input,
+  .form-mobile textarea,
+  .form-mobile select {
+    font-size: 16px; /* Prevents zoom on iOS */
+    padding: 0.75rem;
+  }
+  
+  /* Adjust video controls for mobile */
+  .video-controls-mobile {
+    padding: 0.5rem;
+  }
+  
+  .video-controls-mobile button {
+    padding: 0.25rem;
+  }
+  
+  /* Adjust slider for mobile */
+  .slider-mobile {
+    height: 200px;
+  }
+}
+
+/* Responsive styles for tablets */
+@media (min-width: 768px) and (max-width: 1024px) {
+  /* Adjust section padding for tablets */
+  section {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+  
+  /* Adjust video player for tablets */
+  .video-player-tablet {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  /* Adjust slider for tablets */
+  .slider-tablet {
+    height: 300px;
+  }
+}
+
+/* Responsive styles for larger screens */
+@media (min-width: 1024px) {
+  /* Adjust section padding for desktop */
+  section {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+  
+  /* Adjust slider for desktop */
+  .slider-desktop {
+    height: 500px;
+  }
+}
+
+/* Ensure proper viewport handling */
+@viewport {
+  width: device-width;
+  zoom: 1.0;
+}
+
+/* Fix for iOS Safari input zoom */
+@media screen and (-webkit-min-device-pixel-ratio: 2) {
+  select,
+  textarea,
+  input {
+    font-size: 16px;
+  }
+}
