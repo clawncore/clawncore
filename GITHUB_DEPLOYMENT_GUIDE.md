@@ -51,9 +51,9 @@ This guide will help you deploy your ClawnCore Multitech Company website to GitH
 
 Your repository includes:
 
-- **Client**: React frontend application in the `client/` directory
-- **Server**: Express.js backend in the `server/` directory
-- **Shared**: Shared types and schemas in the `shared/` directory
+- **Frontend**: React frontend application in the `frontend/` directory
+- **Backend**: Express.js backend in the `backend/` directory
+- **Shared**: Shared types and schemas in the `backend/shared/` directory
 - **Documentation**: Deployment guides and API documentation
 - **Scripts**: Utility scripts for building and deployment
 
@@ -71,30 +71,47 @@ For security, environment variables are not committed to the repository. You'll 
 
 - `NODE_ENV`: Set to "production"
 - `PORT`: Server port (default: 3001)
-- `DATABASE_URL`: MongoDB connection string
+- `DATABASE_URL`: PostgreSQL connection string
 - `EMAIL_USER` and `EMAIL_PASS`: Email credentials (optional)
 
 ## Deployment to Hosting Platforms
 
 After pushing to GitHub, you can deploy to various platforms:
 
-### Vercel/Netlify (Frontend Only)
+### GitHub Pages (Frontend Only)
+For frontend hosting with separate backend:
+1. Go to your repository settings on GitHub
+2. Navigate to "Pages" under "Code and automation"
+3. Under "Source", select "GitHub Actions"
+4. The site will automatically deploy using the GitHub Actions workflow
+5. Your site will be available at `https://<username>.github.io/<repository-name>/`
+
+### Netlify (Frontend Only)
 For frontend hosting with separate backend:
 1. Import your GitHub repository
 2. Set the build command to `npm run build`
-3. Set the output directory to `dist/public`
+3. Set the publish directory to `frontend/dist`
+4. Set the base directory to `frontend`
 
-### Heroku/Railway (Full Stack)
-For full-stack deployment:
+### Vercel (Frontend Only)
+For frontend hosting with separate backend:
+1. Import your GitHub repository
+2. Set the build command to `npm run build`
+3. Set the output directory to `frontend/dist`
+4. Set the root directory to `frontend`
+
+### Render/Railway/Heroku (Backend Only)
+For backend deployment:
 1. Connect your GitHub repository
-2. Set environment variables in the dashboard
-3. Deploy using the platform's CI/CD
+2. Set the root directory to `backend`
+3. Set environment variables in the dashboard
+4. Deploy using the platform's CI/CD
 
 ### Traditional Hosting (VPS/Dedicated Server)
 1. Clone the repository to your server
-2. Install dependencies with `npm install`
-3. Build the application with `npm run build`
-4. Start the server with `npm start`
+2. Install dependencies with `npm install` in both frontend and backend directories
+3. Build the application with `npm run build` from the root directory
+4. Start the server with `cd backend && npm start`
 
 ## Post-Deployment
 

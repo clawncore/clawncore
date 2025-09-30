@@ -1,136 +1,129 @@
-# ClawnCore Multitech Company Website
+# ClawnCore Multitech Company
 
-This is a modern React website for ClawnCore Multitech Company with a semi-dark vibrant theme.
+A modern semi-dark vibrant React website for ClawnCore Multitech Company.
 
-## Features
+## Project Structure
 
-- Responsive design with mobile-friendly navigation
-- Dark/light theme toggle
-- Services showcase (Agriculture, Cloud Computing, Cybersecurity)
-- Video gallery with YouTube integration
-- Contact form with validation
-- Logo gallery with featured logos section
-- Admin panel for logo management
-- Subscription system
-- Clawn AI integration
-- User authentication and profile management
-- Inline video players for service demos
+This project is organized into two main directories:
+
+- `frontend/` - Contains all frontend code (React application)
+- `backend/` - Contains all backend code (Node.js/Express API)
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js (v16 or higher)
+- npm or yarn
+
+### Installation
+
+1. Install root dependencies:
+   ```bash
+   npm install
+   ```
+
+2. Install frontend dependencies:
+   ```bash
+   cd frontend
+   npm install
+   ```
+
+3. Install backend dependencies:
+   ```bash
+   cd ../backend
+   npm install
+   ```
+
+### Development
+
+To run both frontend and backend in development mode:
+
+```bash
+cd ..
+npm run dev
+```
+
+This will start:
+- Frontend development server on http://localhost:3000
+- Backend API server on http://localhost:3001
+
+### Building for Production
+
+To build both frontend and backend for production:
+
+```bash
+npm run build
+```
+
+### Deployment
+
+This project is configured for deployment on Netlify. The frontend will be built and served statically, while the backend API will need to be deployed separately (e.g., on a Node.js hosting service).
+
+## Folder Structure
+
+```
+.
+├── frontend/                 # Frontend React application
+│   ├── src/                  # Source code
+│   │   ├── components/       # React components
+│   │   ├── contexts/         # React contexts
+│   │   ├── hooks/            # Custom hooks
+│   │   ├── lib/              # Utility functions
+│   │   ├── pages/            # Page components
+│   │   ├── App.tsx           # Main App component
+│   │   ├── index.css         # Global styles
+│   │   └── main.tsx          # Entry point
+│   ├── index.html            # HTML template
+│   ├── package.json          # Frontend dependencies
+│   ├── tsconfig.json         # TypeScript configuration
+│   └── vite.config.ts        # Vite configuration
+│
+├── backend/                  # Backend API
+│   ├── shared/               # Shared code between frontend and backend
+│   ├── index.ts              # Entry point
+│   ├── routes.ts             # API routes
+│   ├── storage.ts            # Data storage utilities
+│   ├── localAuth.ts          # Authentication utilities
+│   ├── db.ts                 # Database configuration
+│   ├── package.json          # Backend dependencies
+│   ├── tsconfig.json         # TypeScript configuration
+│   └── vite.ts               # Vite utilities
+│
+├── attached_assets/          # Static assets
+├── netlify.toml              # Netlify deployment configuration
+└── package.json              # Root package with workspace scripts
+```
+
+## Technologies Used
+
+### Frontend
+- React 18
+- TypeScript
+- Vite
+- Tailwind CSS
+- Radix UI
+- React Query
+- Wouter (routing)
+
+### Backend
+- Node.js
+- Express
+- TypeScript
+- Drizzle ORM
+- PostgreSQL (via Neon)
 
 ## Available Scripts
 
-In the project directory, you can run:
+### Root scripts
+- `npm run dev` - Start both frontend and backend in development mode
+- `npm run build` - Build both frontend and backend for production
 
-### `npm run dev`
+### Frontend scripts
+- `npm run dev` - Start frontend development server
+- `npm run build` - Build frontend for production
+- `npm run preview` - Preview production build
 
-Runs the app in development mode with hot reloading.
-
-### `npm run dev:server`
-
-Runs the backend server in development mode.
-
-### `npm run build`
-
-Builds the app for production to the `dist/public` folder.
-It correctly bundles React in production mode and optimizes the build for the best performance.
-The build is minified and the filenames include the hashes.
-Your app is ready to be deployed!
-
-### `npm run build:deploy`
-
-Runs a complete build process with cleanup and verification steps.
-
-### `npm run test:deploy`
-
-Tests the deployment setup and verifies required tools and environment variables.
-
-### `npm start`
-
-Runs the production server that serves both the API and the built client files.
-Make sure to run `npm run build` first.
-
-### Deployment
-
-To deploy the application:
-
-1. Build the client: `npm run build` or `npm run build:deploy`
-2. Start the server: `npm start`
-3. The application will be available on the port specified in your environment variables (default: 3001)
-
-For production deployment, make sure to set the following environment variables:
-- `NODE_ENV=production`
-- `PORT` (optional, defaults to 3001)
-- `DATABASE_URL` (MongoDB connection string)
-- `EMAIL_USER` and `EMAIL_PASS` (for email functionality, optional)
-
-### Health Check
-
-The application includes a health check endpoint at `GET /api/health` that can be used to verify the deployment is working correctly.
-
-## Logo Management
-
-The website includes a complete logo management system with:
-
-- Database storage for logos
-- RESTful API endpoints for CRUD operations
-- Client-side React hooks for easy integration
-- Featured logos section on the homepage
-- Dedicated logo gallery page
-- Admin panel for managing logos
-
-### API Endpoints
-
-- `GET /api/logos` - Get all logos
-- `GET /api/logos/featured` - Get featured logos
-- `GET /api/logos/:id` - Get a specific logo
-- `POST /api/logos` - Create a new logo (authenticated)
-- `PATCH /api/logos/:id` - Update a logo (authenticated)
-- `DELETE /api/logos/:id` - Delete a logo (authenticated)
-- `GET /api/health` - Health check endpoint for deployment verification
-
-See [Logo API Documentation](server/docs/logo-api.md) for detailed information.
-
-## Authentication
-
-The website uses Replit authentication with a custom login flow:
-
-- Direct login page as the entry point
-- Profile page for authenticated users
-- Automatic redirection for unauthenticated users
-
-## Service Demos
-
-Each service page includes an inline video player to showcase the technology:
-
-- Agriculture solutions page with demo video
-- Cloud computing platform with demo video
-- Cybersecurity protection with demo video
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### Backend scripts
+- `npm run dev` - Start backend development server
+- `npm run build` - Build backend for production

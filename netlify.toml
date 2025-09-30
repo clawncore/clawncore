@@ -1,5 +1,15 @@
-# Netlify configuration for SPA routing
+[build]
+  base = "frontend"
+  publish = "dist"
+  command = "npm run build"
+
 [[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200
+
+[dev]
+  command = "npm run dev"
+  targetPort = 3000
+  port = 8888
+  publish = "dist"
