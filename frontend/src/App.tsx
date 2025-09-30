@@ -22,6 +22,15 @@ import NotFound from "@/pages/not-found";
 function RouterWrapper() {
   const { loginModalOpen, setLoginModalOpen } = useAuth();
 
+  // Handle GitHub Pages redirect
+  if (typeof window !== 'undefined') {
+    const redirect = sessionStorage.getItem('redirect');
+    if (redirect) {
+      sessionStorage.removeItem('redirect');
+      // We don't need to do anything here as wouter will handle the route
+    }
+  }
+
   return (
     <Router base="">
       <Switch>

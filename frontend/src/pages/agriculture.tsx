@@ -90,14 +90,12 @@ export default function Agriculture() {
               </div>
             </div>
             <div className="relative">
-              <div className="relative rounded-2xl overflow-hidden border-8 border-white shadow-2xl flex items-center justify-center bg-gradient-to-br from-green-100 to-blue-100 dark:from-green-900 dark:to-blue-900 min-h-[400px]">
-                <div className="text-center p-8">
-                  <Leaf className="h-16 w-16 text-green-600 dark:text-green-400 mx-auto mb-4" />
-                  <h3 className="text-2xl font-bold text-green-800 dark:text-green-200 mb-2">Smart Agriculture</h3>
-                  <p className="text-green-700 dark:text-green-300">
-                    Precision farming technology for sustainable agriculture
-                  </p>
-                </div>
+              <div className="relative rounded-2xl overflow-hidden border-8 border-white shadow-2xl">
+                <img
+                  src="https://images.unsplash.com/photo-1627425771097-00b6d7a4c8d4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600"
+                  alt="Precision Agriculture Technology"
+                  className="w-full h-auto"
+                />
               </div>
               <div className="absolute -bottom-6 -left-6 w-32 h-32 bg-yellow-400 rounded-full opacity-20"></div>
               <div className="absolute -top-6 -right-6 w-24 h-24 bg-green-500 rounded-full opacity-20"></div>
@@ -188,8 +186,8 @@ export default function Agriculture() {
                 </div>
                 <div className="rounded-2xl overflow-hidden mt-8">
                   <img
-                    src="https://images.unsplash.com/photo-1597571513570-0d9a2f1c8e3d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300"
-                    alt="Smart Irrigation"
+                    src="https://images.unsplash.com/photo-1626785774573-4b799315345d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300"
+                    alt="Agricultural Technology"
                     className="w-full h-auto"
                   />
                 </div>
@@ -219,7 +217,7 @@ export default function Agriculture() {
             {isAuthenticated ? (
               <div className="relative aspect-video bg-muted rounded-xl flex items-center justify-center">
                 <img
-                  src="/jpeg (1)_1757147128009.jpeg"
+                  src="https://images.unsplash.com/photo-1597571513540-7c6180c2e9f6?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600"
                   alt="Smart Agriculture Platform"
                   className="w-full h-full object-cover rounded-xl"
                 />
@@ -233,7 +231,7 @@ export default function Agriculture() {
             ) : (
               <div className="relative aspect-video bg-muted rounded-xl flex items-center justify-center">
                 <img
-                  src="/jpeg (1)_1757147128009.jpeg"
+                  src="https://images.unsplash.com/photo-1597571513540-7c6180c2e9f6?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600"
                   alt="Smart Agriculture Platform"
                   className="w-full h-full object-cover rounded-xl opacity-50"
                 />
