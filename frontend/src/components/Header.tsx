@@ -67,7 +67,7 @@ export function Header() {
             <SheetContent side="left" className="w-[280px] sm:w-[320px]">
               <div className="flex items-center space-x-3 mb-6">
                 <img
-                  src="/attached_assets/jpeg (1)_1757147457432.jpeg"
+                  src="/attached_assets/logo.jpeg"
                   alt="ClawnCore Logo"
                   className="w-8 h-8 object-contain"
                   style={{ background: 'transparent' }}
@@ -203,19 +203,11 @@ export function Header() {
         <Link href="/">
           <div className="flex items-center space-x-2 md:space-x-3 cursor-pointer">
             <img
-              src="/attached_assets/jpeg (1)_1757147457432.jpeg"
+              src="/attached_assets/logo.jpeg"
               alt="ClawnCore Logo"
               className="w-8 h-8 md:w-10 md:h-10 lg:w-12 lg:h-12 object-contain"
               style={{ background: 'transparent' }}
-              onError={(e) => {
-                // Fallback to gradient logo if image fails to load
-                (e.currentTarget as HTMLImageElement).style.display = 'none';
-                ((e.currentTarget.nextElementSibling as HTMLElement)).style.display = 'flex';
-              }}
             />
-            <div className="w-8 h-8 md:w-10 md:h-10 lg:w-12 lg:h-12 bg-gradient-to-br from-purple-600 to-pink-600 rounded-lg flex items-center justify-center" style={{ display: 'none' }}>
-              <div className="w-3 h-3 md:w-4 md:h-4 bg-white rounded-full opacity-90" />
-            </div>
             <span className="text-base md:text-lg lg:text-xl font-bold bg-gradient-to-r from-purple-600 via-pink-600 to-blue-600 bg-clip-text text-transparent">
               ClawnCore
             </span>

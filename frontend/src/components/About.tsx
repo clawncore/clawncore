@@ -55,7 +55,7 @@ export function About() {
           <div className="group p-6 bg-card rounded-2xl border border-border hover:border-purple-600/50 transition-all duration-300 transform hover:scale-105">
             <div className="w-32 h-32 md:w-36 md:h-36 rounded-full overflow-hidden mx-auto mb-4">
               <img
-                src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=300"
+                src="/attached_assets/simbisai chinhema.jpg"
                 alt="Simbisai Chinhema"
                 className="w-full h-full object-cover"
               />
@@ -71,13 +71,13 @@ export function About() {
           <div className="group p-6 bg-card rounded-2xl border border-border hover:border-pink-600/50 transition-all duration-300 transform hover:scale-105">
             <div className="w-32 h-32 md:w-36 md:h-36 rounded-full overflow-hidden mx-auto mb-4">
               <img
-                src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=300"
+                src="/attached_assets/craig marowa.jpg"
                 alt="Craig Marowa"
                 className="w-full h-full object-cover"
               />
             </div>
             <h4 className="text-xl font-bold text-center mb-2">Craig Marowa</h4>
-            <p className="text-pink-600 text-center mb-3">Co-Founder & CEO</p>
+            <p className="text-pink-600 text-center mb-3">Co-Founder & CTO</p>
             <p className="text-sm text-muted-foreground text-center">
               Technology strategist with deep expertise in cybersecurity and cloud infrastructure,
               ensuring robust and scalable solutions.

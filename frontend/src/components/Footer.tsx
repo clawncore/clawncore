@@ -27,9 +27,9 @@ export function Footer() {
           {/* Company Info */}
           <div className="space-y-4">
             <div className="flex items-center space-x-3">
-              <img 
-                src="/attached_assets/jpeg (1)_1757147457432.jpeg" 
-                alt="ClawnCore Logo" 
+              <img
+                src="/attached_assets/logo.jpeg"
+                alt="ClawnCore Logo"
                 className="w-10 h-10 md:w-12 md:h-12 object-contain"
                 style={{ background: 'transparent' }}
                 onError={(e) => {
@@ -49,22 +49,22 @@ export function Footer() {
               Empowering the future with intelligent technology solutions across multiple industries.
             </p>
             <div className="flex space-x-3">
-              <a 
-                href="#" 
+              <a
+                href="#"
                 className="w-8 h-8 bg-muted rounded-lg flex items-center justify-center hover:bg-purple-600 hover:text-white transition-colors text-sm"
                 data-testid="footer-link-linkedin"
               >
                 <Linkedin size={14} />
               </a>
-              <a 
-                href="#" 
+              <a
+                href="#"
                 className="w-8 h-8 bg-muted rounded-lg flex items-center justify-center hover:bg-purple-600 hover:text-white transition-colors text-sm"
                 data-testid="footer-link-twitter"
               >
                 <Twitter size={14} />
               </a>
-              <a 
-                href="#" 
+              <a
+                href="#"
                 className="w-8 h-8 bg-muted rounded-lg flex items-center justify-center hover:bg-purple-600 hover:text-white transition-colors text-sm"
                 data-testid="footer-link-github"
               >
@@ -102,15 +102,15 @@ export function Footer() {
             <h4 className="font-semibold">Stay Updated</h4>
             <p className="text-muted-foreground text-sm">Subscribe to our newsletter for the latest tech insights.</p>
             <form onSubmit={handleNewsletterSubmit} className="space-y-2">
-              <Input 
-                type="email" 
-                placeholder="Enter your email" 
+              <Input
+                type="email"
+                placeholder="Enter your email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 className="text-sm"
                 data-testid="input-newsletter-email"
               />
-              <Button 
+              <Button
                 type="submit"
                 className="w-full bg-purple-600 hover:bg-purple-700 text-white text-sm font-medium"
                 data-testid="button-newsletter-subscribe"
