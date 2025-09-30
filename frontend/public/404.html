@@ -5,32 +5,16 @@
   <meta charset="utf-8" />
   <title>ClawnCore Multitech Company</title>
   <script>
-    // GitHub Pages redirect for SPA
-    (function () {
-      // Get the current path
-      var path = window.location.pathname;
-
-      // For GitHub Pages, we need to preserve the path after /clawncore
-      var segments = path.split('/').filter(Boolean);
-      var repoIndex = segments.indexOf('clawncore');
-
-      if (repoIndex !== -1) {
-        // Extract the path after /clawncore
-        var appPath = '/' + segments.slice(repoIndex + 1).join('/');
-
-        // Store in sessionStorage for the app to use
-        sessionStorage.setItem('redirect', appPath);
-      }
-
-      // Redirect to the main index.html
-      var baseUrl = window.location.origin + '/clawncore/';
-      window.location.replace(baseUrl);
-    })();
+    // Redirect to index.html for client-side routing (Netlify)
+    var path = window.location.pathname;
+    var baseUrl = window.location.origin + '/';
+    
+    window.location.replace(baseUrl);
   </script>
 </head>
 
 <body>
-  <p>If you are not redirected automatically, follow this <a href="/clawncore/">link to homepage</a>.</p>
+  <p>If you are not redirected automatically, follow this <a href="/">link to homepage</a>.</p>
 </body>
 
 </html>
