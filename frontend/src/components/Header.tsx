@@ -67,7 +67,7 @@ export function Header() {
             <SheetContent side="left" className="w-[280px] sm:w-[320px]">
               <div className="flex items-center space-x-3 mb-6">
                 <img
-                  src="/attached_assets/logo.jpeg"
+                  src="/logo.jpeg"
                   alt="ClawnCore Logo"
                   className="w-8 h-8 object-contain"
                   style={{ background: 'transparent' }}
@@ -203,7 +203,7 @@ export function Header() {
         <Link href="/">
           <div className="flex items-center space-x-2 md:space-x-3 cursor-pointer">
             <img
-              src="/attached_assets/logo.jpeg"
+              src="/logo.jpeg"
               alt="ClawnCore Logo"
               className="w-8 h-8 md:w-10 md:h-10 lg:w-12 lg:h-12 object-contain"
               style={{ background: 'transparent' }}

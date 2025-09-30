@@ -9,29 +9,29 @@ const videos = [
     id: 1,
     title: "ClawnCore Introduction",
     description: "Learn about our comprehensive technology solutions",
-    thumbnail: "/attached_assets/video-thumbnail-1.jpg",
-    videoSrc: "/attached_assets/demo-video-1.mp4"
+    thumbnail: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300",
+    videoSrc: "#"
   },
   {
     id: 2,
     title: "Drone Technology Showcase",
     description: "See our advanced UAV solutions in action",
-    thumbnail: "/attached_assets/video-thumbnail-2.jpg",
-    videoSrc: "/attached_assets/demo-video-2.mp4"
+    thumbnail: "https://images.unsplash.com/photo-1504639725590-34d0984388bd?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300",
+    videoSrc: "#"
   },
   {
     id: 3,
     title: "Agriculture Solutions Demo",
     description: "Smart farming technologies for modern agriculture",
-    thumbnail: "/attached_assets/video-thumbnail-3.jpg",
-    videoSrc: "/attached_assets/demo-video-3.mp4"
+    thumbnail: "https://images.unsplash.com/photo-1515704089429-546076d4d2c3?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300",
+    videoSrc: "#"
   },
   {
     id: 4,
     title: "Cloud Computing Platform",
     description: "Scalable infrastructure for your business",
-    thumbnail: "/attached_assets/video-thumbnail-4.jpg",
-    videoSrc: "/attached_assets/demo-video-4.mp4"
+    thumbnail: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300",
+    videoSrc: "#"
   }
 ];
 

@@ -12,7 +12,9 @@
     "build:backend": "cd backend && npm run build",
     "preview": "cd frontend && npm run preview",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d frontend/dist"
+    "deploy": "gh-pages -d frontend/dist",
+    "deploy:github": "gh-pages -d frontend/dist",
+    "deploy:netlify": "cd frontend && npm run build"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.10.0",

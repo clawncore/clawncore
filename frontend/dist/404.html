@@ -5,7 +5,7 @@
   <meta charset="utf-8" />
   <title>ClawnCore Multitech Company</title>
   <script>
-    // GitHub Pages redirect for SPA
+    // Universal redirect for SPA
     (function () {
       var redirect = sessionStorage.redirect;
       delete sessionStorage.redirect;
@@ -16,14 +16,14 @@
 
     // Redirect to index.html for client-side routing
     var path = window.location.pathname;
-    var baseUrl = window.location.origin + '/clawncore/';
+    var baseUrl = window.location.origin + window.location.pathname.split('/').slice(0, -1).join('/') + '/';
 
     window.location.replace(baseUrl);
   </script>
 </head>
 
 <body>
-  <p>If you are not redirected automatically, follow this <a href="/clawncore/">link to homepage</a>.</p>
+  <p>If you are not redirected automatically, follow this <a href="./">link to homepage</a>.</p>
 </body>
 
 </html>

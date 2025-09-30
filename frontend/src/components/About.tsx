@@ -55,7 +55,7 @@ export function About() {
           <div className="group p-6 bg-card rounded-2xl border border-border hover:border-purple-600/50 transition-all duration-300 transform hover:scale-105">
             <div className="w-32 h-32 md:w-36 md:h-36 rounded-full overflow-hidden mx-auto mb-4">
               <img
-                src="/attached_assets/simby.jpg"
+                src="/simby.jpg"
                 alt="Simbisai Chinhema"
                 className="w-full h-full object-cover"
               />
@@ -71,7 +71,7 @@ export function About() {
           <div className="group p-6 bg-card rounded-2xl border border-border hover:border-pink-600/50 transition-all duration-300 transform hover:scale-105">
             <div className="w-32 h-32 md:w-36 md:h-36 rounded-full overflow-hidden mx-auto mb-4">
               <img
-                src="/attached_assets/craig.jpg"
+                src="/craig.jpg"
                 alt="Craig Marowa"
                 className="w-full h-full object-cover"
               />

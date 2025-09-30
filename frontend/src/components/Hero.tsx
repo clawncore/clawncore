@@ -66,7 +66,7 @@ export function Hero() {
         <div className="text-center mb-8 md:mb-12">
           <div className="flex justify-center items-center space-x-3 mb-6 md:mb-8 md:space-x-4">
             <img
-              src="/attached_assets/jpeg (1)_1757147457432.jpeg"
+              src="/jpeg (1)_1757147457432.jpeg"
               alt="ClawnCore Logo"
               className="w-16 h-16 md:w-20 md:h-20 lg:w-24 lg:h-24 object-contain"
               style={{ background: 'transparent' }}

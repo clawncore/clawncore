@@ -23,7 +23,7 @@ function RouterWrapper() {
   const { loginModalOpen, setLoginModalOpen } = useAuth();
 
   return (
-    <Router base="/clawncore">
+    <Router base="">
       <Switch>
         <Route path="/" component={Home} />
         <Route path="/login" component={Login} />
