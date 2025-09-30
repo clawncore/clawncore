@@ -17,7 +17,7 @@ export default defineConfig({
   },
   root: path.resolve(import.meta.dirname, "frontend"),
   build: {
-    outDir: path.resolve(import.meta.dirname, "dist/public"),
+    outDir: path.resolve(import.meta.dirname, "frontend", "dist"),
     emptyOutDir: true,
     rollupOptions: {
       output: {
