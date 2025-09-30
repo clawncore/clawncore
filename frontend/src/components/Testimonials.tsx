@@ -1,4 +1,3 @@
-import React from 'react';
 import { Star } from 'lucide-react';
 
 const testimonials = [
@@ -51,9 +50,9 @@ export function Testimonials() {
                   "{testimonial.content}"
                 </p>
                 <div className="flex items-center space-x-3">
-                  <img 
-                    src={testimonial.image} 
-                    alt={testimonial.name} 
+                  <img
+                    src={testimonial.image}
+                    alt={testimonial.name}
                     className="w-12 h-12 md:w-14 md:h-14 rounded-full object-cover"
                   />
                   <div>

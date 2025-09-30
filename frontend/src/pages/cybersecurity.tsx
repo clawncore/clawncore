@@ -1,13 +1,11 @@
-import React from 'react';
 import { useLocation } from 'wouter';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { Play, CheckCircle, ArrowRight, Shield, Lock, Eye, AlertTriangle, Key, Fingerprint } from 'lucide-react';
+import { Play, CheckCircle, ArrowRight, Shield, Lock, Eye, AlertTriangle } from 'lucide-react';
 import { useAuth } from '@/hooks/useAuth';
-import { VideoPlayer } from '@/components/VideoPlayer';
 
 export default function Cybersecurity() {
   const [, navigate] = useLocation();
@@ -217,22 +215,30 @@ export default function Cybersecurity() {
 
           <div className="max-w-4xl mx-auto">
             {isAuthenticated ? (
-              <VideoPlayer
-                videoSrc="/attached_assets/demo-video-5.mp4"
-                thumbnailSrc="/attached_assets/video-thumbnail-5.jpg"
-                title="Cybersecurity Platform"
-              />
+              <div className="relative aspect-video bg-muted rounded-xl flex items-center justify-center">
+                <img
+                  src="/jpeg (1)_1757147457432.jpeg"
+                  alt="Cybersecurity Platform"
+                  className="w-full h-full object-cover rounded-xl"
+                />
+                <div className="absolute inset-0 flex flex-col items-center justify-center bg-black bg-opacity-40 rounded-xl p-4">
+                  <Play className="h-12 w-12 text-white mb-4" />
+                  <p className="text-white text-xl font-medium text-center px-4">
+                    Cybersecurity Demo
+                  </p>
+                </div>
+              </div>
             ) : (
               <div className="relative aspect-video bg-muted rounded-xl flex items-center justify-center">
                 <img
-                  src="/attached_assets/video-thumbnail-5.jpg"
+                  src="/jpeg (1)_1757147457432.jpeg"
                   alt="Cybersecurity Platform"
                   className="w-full h-full object-cover rounded-xl opacity-50"
                 />
                 <div className="absolute inset-0 flex flex-col items-center justify-center bg-black bg-opacity-40 rounded-xl p-4">
                   <Play className="h-12 w-12 text-white mb-4" />
                   <p className="text-white text-xl font-medium text-center px-4 mb-6">
-                    Sign in to watch the full demo video
+                    Sign in to watch the full demo
                   </p>
                   <Button
                     onClick={handleWatchDemo}

@@ -1,9 +1,7 @@
-import React from 'react';
 import { useLocation } from 'wouter';
 import { useAuth } from '@/hooks/useAuth';
 import { VideoPlayer } from '@/components/VideoPlayer';
 import { Button } from '@/components/ui/button';
-import { Card } from '@/components/ui/card';
 import { Lock } from 'lucide-react';
 
 const videos = [

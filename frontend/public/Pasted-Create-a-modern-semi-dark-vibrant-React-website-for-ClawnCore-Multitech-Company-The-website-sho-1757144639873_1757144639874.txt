@@ -1,0 +1,148 @@
+Create a modern, semi-dark, vibrant React website for “ClawnCore Multitech Company.”
+The website should combine elegance, clarity, and futuristic design. It should use soft dark backgrounds with bright highlights, gradients, and smooth animations without being fully dark or dull. The hero section must feature a split layout where one half displays an animated slideshow of images related to drones, agriculture, AI, cloud computing, cybersecurity, and other tech services, and the other half presents the title, logo, and introductory content in a clear and dynamic way. The website should feel engaging, trustworthy, and forward-looking while being visually appealing and easy to navigate.
+
+✅ Design Guidelines
+
+Color scheme: Semi-dark background (#f4f4f4 or #1f2937) with bright accents like purple (#7c3aed), pink (#ec4899), blue (#3b82f6), and soft whites (#ffffff) for text and buttons.
+
+Typography: Clean, bold fonts with animated gradient effects for headers.
+
+Slideshow:
+
+The left half of the hero section displays a slideshow of high-resolution images (drones flying over farms, AI interfaces, cloud computing graphics, cybersecurity grids, mobile apps, and data analytics visuals).
+
+Images should transition smoothly with fade or slide animations.
+
+Content Block:
+
+The right half of the hero section contains the ClawnCore logo at the top, followed by a dynamic header and introductory text with a CTA button.
+
+Use semi-transparent backgrounds or soft shadows to ensure readability.
+
+Animations:
+
+Floating icons representing technology scattered subtly in the background.
+
+Smooth scroll and hover effects throughout the site.
+
+✅ Content Requirements
+
+Header/Navbar
+
+Visible logo on the left side.
+
+Links: Home, About, Services, Clawn AI, Agriculture, Cloud, Cybersecurity, Vision & Mission, Contact.
+
+Sticky navigation with smooth scroll effects and slight hover animations.
+
+Hero Section
+
+Split layout:
+
+Left side: Slideshow of images showing the company’s tech services (drones, agriculture, AI, cybersecurity, etc.).
+
+Right side:
+
+Logo at the top.
+
+Animated title: “Empowering the Future with Intelligent Solutions.”
+
+Supporting text explaining ClawnCore’s mission and services.
+
+“Learn More” button that routes to the services page.
+
+Semi-transparent content block with soft backgrounds and rounded corners.
+
+About Section
+
+Founded in 2025.
+
+CEOs Simbisai Chinhema and Craig Marowa, with hover effects and short bios.
+
+Timeline or cards showing company milestones.
+
+Description of the company’s tech-driven approach.
+
+Services Section
+
+Display cards for:
+
+Drone Technology
+
+Agriculture Solutions
+
+Cloud Computing
+
+Clawn AI
+
+Cybersecurity
+
+Mobile Development
+
+Data Analytics
+
+Each card has an icon, title, brief description, and “Learn More” linking to a detailed page.
+
+Clawn AI Showcase
+
+Features, interactive diagrams, and use cases.
+
+Animated charts or icons representing AI solutions.
+
+Vision & Mission
+
+Split layout with animated headings.
+
+Core values with icons and descriptions.
+
+Smooth scroll animations.
+
+Testimonials Carousel
+
+Client feedback rotating automatically.
+
+Clear and engaging design with navigation arrows.
+
+Contact Form
+
+Interactive fields with validation.
+
+Floating labels and glow effects on focus.
+
+Map with a semi-dark style.
+
+Social media icons with subtle animations.
+
+Footer
+
+Links, newsletter signup, privacy policy.
+
+Soft gradients, particle effects, and smooth transitions.
+
+✅ Technical Requirements
+
+Use React with React Router for navigation.
+
+Style using Tailwind CSS or styled-components with gradient overlays and soft shadows.
+
+Optimize images and slideshow transitions for smooth performance.
+
+Include libraries like Swiper.js for slideshows and Framer Motion or react-spring for animations.
+
+Ensure accessibility, SEO optimization, and responsive design across devices.
+
+✅ User Interaction & Feedback Questions
+
+Once implemented, review:
+
+Does the slideshow clearly represent all your services with vibrant, high-quality images?
+
+Is the logo visible and the title dynamic and engaging?
+
+Does the semi-dark theme feel bright, fresh, and modern without being overwhelming?
+
+Are the animations smooth and visually appealing?
+
+Is the navigation intuitive and easy to use?
+
+Do the service pages explain your technologies thoroughly and professionally?

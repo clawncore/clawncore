@@ -1,11 +1,10 @@
-import React from 'react';
 import { useLocation } from 'wouter';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { Play, CheckCircle, ArrowRight, Cloud, Server, Shield, Zap, Network, Database } from 'lucide-react';
+import { Play, CheckCircle, ArrowRight, Cloud, Shield, Zap, Database } from 'lucide-react';
 import { useAuth } from '@/hooks/useAuth';
 import { VideoPlayer } from '@/components/VideoPlayer';
 
@@ -218,14 +217,14 @@ export default function CloudComputing() {
           <div className="max-w-4xl mx-auto">
             {isAuthenticated ? (
               <VideoPlayer
-                videoSrc="/attached_assets/demo-video-4.mp4"
-                thumbnailSrc="/attached_assets/video-thumbnail-4.jpg"
+                videoSrc="/jpeg (1)_1757147128009.jpeg"
+                thumbnailSrc="/jpeg (1)_1757147128009.jpeg"
                 title="Cloud Computing Platform"
               />
             ) : (
               <div className="relative aspect-video bg-muted rounded-xl flex items-center justify-center">
                 <img
-                  src="/attached_assets/video-thumbnail-4.jpg"
+                  src="/jpeg (1)_1757147128009.jpeg"
                   alt="Cloud Computing Platform"
                   className="w-full h-full object-cover rounded-xl opacity-50"
                 />

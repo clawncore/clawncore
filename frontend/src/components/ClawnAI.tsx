@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { useLocation } from 'wouter';
 import { Button } from '@/components/ui/button';
 import { ArrowRight, Bot, Languages, Eye } from 'lucide-react';
@@ -24,7 +24,7 @@ export function ClawnAI() {
         <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
           <div className="space-y-8">
             <h3 className="text-3xl font-bold">Intelligent Automation at Scale</h3>
-            
+
             <div className="space-y-6">
               <div className="flex items-start space-x-4">
                 <div className="w-8 h-8 bg-purple-600 rounded-lg flex items-center justify-center flex-shrink-0 mt-1">
@@ -57,7 +57,7 @@ export function ClawnAI() {
               </div>
             </div>
 
-            <Button 
+            <Button
               className="bg-purple-600 hover:bg-purple-700 text-white"
               data-testid="button-explore-ai"
               onClick={() => navigate('/get-started')}
@@ -69,9 +69,9 @@ export function ClawnAI() {
 
           <div className="rounded-2xl overflow-hidden">
             {!imageError ? (
-              <img 
-                src="https://images.unsplash.com/photo-1677442136019-21780ecad995?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=800" 
-                alt="AI dashboard interface" 
+              <img
+                src="https://images.unsplash.com/photo-1677442136019-21780ecad995?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=800"
+                alt="AI dashboard interface"
                 className="w-full h-[300px] md:h-[400px] lg:h-[500px] object-cover"
                 onError={() => setImageError(true)}
               />

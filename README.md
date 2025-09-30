@@ -58,7 +58,20 @@ npm run build
 
 ### Deployment
 
-This project is configured for deployment on Netlify. The frontend will be built and served statically, while the backend API will need to be deployed separately (e.g., on a Node.js hosting service).
+This project is configured for deployment on GitHub Pages. The frontend will be built and served statically, while the backend API will need to be deployed separately (e.g., on a Node.js hosting service).
+
+## GitHub Pages Deployment
+
+To deploy to GitHub Pages:
+
+1. Make sure your repository settings are configured to use GitHub Actions for Pages deployment
+2. Push your changes to the `main` branch
+3. The GitHub Actions workflow will automatically build and deploy your site
+
+The site will be available at `https://<username>.github.io/<repository-name>/`
+
+For example, if your username is `clawncore` and your repository is named `clawncore`, the site will be available at:
+`https://clawncore.github.io/clawncore/`
 
 ## Folder Structure
 

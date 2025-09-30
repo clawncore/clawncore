@@ -1,4 +1,4 @@
-import React from 'react';
+import { useEffect } from 'react';
 import { useLocation } from 'wouter';
 import { useAuth } from '@/hooks/useAuth';
 import { Header } from '@/components/Header';
@@ -27,7 +27,7 @@ export default function Profile() {
   const { user, isAuthenticated, logout } = useAuth();
 
   // If not authenticated, redirect to login
-  React.useEffect(() => {
+  useEffect(() => {
     if (!isAuthenticated) {
       navigate('/login');
     }

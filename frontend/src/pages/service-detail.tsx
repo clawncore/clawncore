@@ -1,4 +1,3 @@
-import React from 'react';
 import { useRoute, useLocation } from 'wouter';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';

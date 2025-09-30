@@ -1,4 +1,3 @@
-import React from 'react';
 import { Globe, Leaf, Lightbulb, Handshake, Star, Shield, Rocket, Users as UsersIcon } from 'lucide-react';
 
 export function VisionMission() {
@@ -15,7 +14,7 @@ export function VisionMission() {
                 </span>
               </h2>
               <p className="text-lg text-muted-foreground leading-relaxed">
-                To be the global leader in intelligent technology solutions, empowering businesses to achieve 
+                To be the global leader in intelligent technology solutions, empowering businesses to achieve
                 unprecedented growth through innovation, automation, and sustainable practices.
               </p>
             </div>
@@ -43,7 +42,7 @@ export function VisionMission() {
                 </span>
               </h2>
               <p className="text-lg text-muted-foreground leading-relaxed">
-                To deliver cutting-edge technology solutions that solve complex business challenges, drive digital 
+                To deliver cutting-edge technology solutions that solve complex business challenges, drive digital
                 transformation, and create meaningful value for our clients and communities.
               </p>
             </div>

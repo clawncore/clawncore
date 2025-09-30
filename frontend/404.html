@@ -5,23 +5,33 @@
   <meta charset="utf-8" />
   <title>ClawnCore Multitech Company</title>
   <script>
-    // Redirect to the index.html for client-side routing
-    sessionStorage.setItem('redirected', 'true');
+    // GitHub Pages redirect for SPA
+    (function () {
+      var redirect = sessionStorage.redirect;
+      delete sessionStorage.redirect;
+      if (redirect && redirect !== location.href) {
+        history.replaceState(null, null, redirect);
+      }
+    })();
+
+    // Redirect to index.html for client-side routing
     var path = window.location.pathname;
-    var pathSegments = path.split('/');
-    var newPath = '';
-    for (var i = 1; i < pathSegments.length; i++) {
-      newPath += '../';
+    var baseUrl = window.location.origin + window.location.pathname.split('/').slice(0, -1).join('/');
+
+    // For GitHub Pages, we need to redirect to the base URL
+    var baseHref = window.location.origin + '/';
+    var repoName = window.location.pathname.split('/')[1];
+
+    if (repoName) {
+      baseHref = window.location.origin + '/' + repoName + '/';
     }
-    if (newPath === '') {
-      newPath = './';
-    }
-    window.location.replace(newPath + 'index.html');
+
+    window.location.replace(baseHref);
   </script>
 </head>
 
 <body>
-  <p>If you are not redirected automatically, follow this <a href="./index.html">link to homepage</a>.</p>
+  <p>If you are not redirected automatically, follow this <a href="/">link to homepage</a>.</p>
 </body>
 
 </html>

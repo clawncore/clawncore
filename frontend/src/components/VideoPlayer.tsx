@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import { useState, useRef } from 'react';
 import { Play, Pause, Volume2, VolumeX, Maximize, RotateCcw } from 'lucide-react';
 
 interface VideoPlayerProps {
@@ -13,7 +13,6 @@ export function VideoPlayer({ videoSrc, thumbnailSrc, title }: VideoPlayerProps)
   const [isMuted, setIsMuted] = useState(false);
   const [progress, setProgress] = useState(0);
   const [volume, setVolume] = useState(1);
-  const [isFullscreen, setIsFullscreen] = useState(false);
 
   const togglePlay = () => {
     if (videoRef.current) {
@@ -62,11 +61,9 @@ export function VideoPlayer({ videoSrc, thumbnailSrc, title }: VideoPlayerProps)
       videoRef.current.requestFullscreen().catch(err => {
         console.error(`Error attempting to enable fullscreen: ${err.message}`);
       });
-      setIsFullscreen(true);
     } else {
       if (document.exitFullscreen) {
         document.exitFullscreen();
-        setIsFullscreen(false);
       }
     }
   };
@@ -92,9 +89,9 @@ export function VideoPlayer({ videoSrc, thumbnailSrc, title }: VideoPlayerProps)
       <div className="relative aspect-video">
         {thumbnailSrc && !isPlaying && (
           <div className="absolute inset-0 flex items-center justify-center">
-            <img 
-              src={thumbnailSrc} 
-              alt={title || "Video thumbnail"} 
+            <img
+              src={thumbnailSrc}
+              alt={title || "Video thumbnail"}
               className="w-full h-full object-cover"
             />
             <button
@@ -107,7 +104,7 @@ export function VideoPlayer({ videoSrc, thumbnailSrc, title }: VideoPlayerProps)
             </button>
           </div>
         )}
-        
+
         <video
           ref={videoRef}
           src={videoSrc}
@@ -115,7 +112,7 @@ export function VideoPlayer({ videoSrc, thumbnailSrc, title }: VideoPlayerProps)
           onTimeUpdate={handleProgress}
           onEnded={() => setIsPlaying(false)}
         />
-        
+
         {!thumbnailSrc && (
           <button
             onClick={togglePlay}
@@ -141,22 +138,22 @@ export function VideoPlayer({ videoSrc, thumbnailSrc, title }: VideoPlayerProps)
             className="w-full h-1 md:h-1.5 bg-gray-600 rounded-lg appearance-none cursor-pointer [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:h-3 [&::-webkit-slider-thumb]:w-3 [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:bg-white"
           />
         </div>
-        
+
         {/* Control Buttons */}
         <div className="flex items-center justify-between">
           <div className="flex items-center space-x-2 md:space-x-4">
             <button onClick={togglePlay} className="text-white hover:text-purple-400">
               {isPlaying ? <Pause size={16} /> : <Play size={16} className="ml-0.5" />}
             </button>
-            
+
             <button onClick={restartVideo} className="text-white hover:text-purple-400">
               <RotateCcw size={16} />
             </button>
-            
+
             <button onClick={toggleMute} className="text-white hover:text-purple-400 hidden md:block">
               {isMuted ? <VolumeX size={16} /> : <Volume2 size={16} />}
             </button>
-            
+
             <input
               type="range"
               min="0"
@@ -166,14 +163,14 @@ export function VideoPlayer({ videoSrc, thumbnailSrc, title }: VideoPlayerProps)
               onChange={handleVolumeChange}
               className="hidden md:block w-16 h-1 md:h-1.5 bg-gray-600 rounded-lg appearance-none cursor-pointer [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:h-3 [&::-webkit-slider-thumb]:w-3 [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:bg-white"
             />
-            
+
             <span className="text-white text-xs md:text-sm">
               {videoRef.current ? formatTime(videoRef.current.currentTime) : '0:00'} / {
                 videoRef.current ? formatTime(videoRef.current.duration) : '0:00'
               }
             </span>
           </div>
-          
+
           <div className="flex items-center space-x-2">
             {title && <span className="hidden md:block text-white text-xs md:text-sm font-medium">{title}</span>}
             <button onClick={toggleFullscreen} className="text-white hover:text-purple-400">

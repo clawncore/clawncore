@@ -27,16 +27,20 @@ jobs:
           node-version: "20"
           cache: "npm"
 
-      - name: Install dependencies
-        run: npm ci
+      - name: Install frontend dependencies
+        run: |
+          cd frontend
+          npm ci
 
-      - name: Build
-        run: npm run build
+      - name: Build frontend
+        run: |
+          cd frontend
+          npm run build
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./dist/public
+          path: ./frontend/dist
 
   deploy:
     environment:

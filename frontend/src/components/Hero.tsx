@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useLocation } from 'wouter';
 import { Button } from '@/components/ui/button';
 import { ArrowRight } from 'lucide-react';
@@ -65,9 +65,9 @@ export function Hero() {
         {/* Centered Content */}
         <div className="text-center mb-8 md:mb-12">
           <div className="flex justify-center items-center space-x-3 mb-6 md:mb-8 md:space-x-4">
-            <img 
-              src="/attached_assets/jpeg (1)_1757147457432.jpeg" 
-              alt="ClawnCore Logo" 
+            <img
+              src="/attached_assets/jpeg (1)_1757147457432.jpeg"
+              alt="ClawnCore Logo"
               className="w-16 h-16 md:w-20 md:h-20 lg:w-24 lg:h-24 object-contain"
               style={{ background: 'transparent' }}
               onError={(e) => {
@@ -95,15 +95,15 @@ export function Hero() {
 
           {/* Supporting Text */}
           <p className="text-base md:text-lg lg:text-xl text-muted-foreground leading-relaxed max-w-2xl mx-auto mb-6 md:mb-8">
-            ClawnCore Multitech Company delivers cutting-edge technology solutions across drone technology, 
-            agriculture, AI, cloud computing, cybersecurity, and data analytics to transform businesses and 
+            ClawnCore Multitech Company delivers cutting-edge technology solutions across drone technology,
+            agriculture, AI, cloud computing, cybersecurity, and data analytics to transform businesses and
             drive innovation.
           </p>
 
           {/* CTA Button */}
           <div className="flex justify-center">
-            <Button 
-              size="lg" 
+            <Button
+              size="lg"
               className="bg-purple-600 hover:bg-purple-700 text-white transform hover:scale-105 transition-all duration-300 text-sm md:text-base"
               onClick={handleGetStarted}
               data-testid="button-get-started"
@@ -119,9 +119,8 @@ export function Hero() {
           {slideImages.map((image, index) => (
             <div
               key={index}
-              className={`absolute inset-0 transition-opacity duration-1000 ${
-                index === currentSlide ? 'opacity-100' : 'opacity-0'
-              }`}
+              className={`absolute inset-0 transition-opacity duration-1000 ${index === currentSlide ? 'opacity-100' : 'opacity-0'
+                }`}
             >
               <img
                 src={image}

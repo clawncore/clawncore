@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useLocation } from 'wouter';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
@@ -22,7 +22,7 @@ export default function Login() {
     const [loading, setLoading] = useState(false);
 
     // If already authenticated, redirect to home
-    React.useEffect(() => {
+    useEffect(() => {
         if (isAuthenticated) {
             navigate('/');
         }
@@ -125,7 +125,7 @@ export default function Login() {
     };
 
     // Reset registration success message when switching modes
-    React.useEffect(() => {
+    useEffect(() => {
         if (showRegistrationSuccess && (isSignUp || email || password)) {
             setShowRegistrationSuccess(false);
         }

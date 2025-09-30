@@ -1,13 +1,11 @@
-import React from 'react';
 import { useLocation } from 'wouter';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { Play, CheckCircle, ArrowRight, Leaf, Droplets, Sun, Wind, MapPin, Calendar, Users } from 'lucide-react';
+import { Play, CheckCircle, ArrowRight, Leaf, Droplets, Sun, Wind } from 'lucide-react';
 import { useAuth } from '@/hooks/useAuth';
-import { VideoPlayer } from '@/components/VideoPlayer';
 
 export default function Agriculture() {
   const [, navigate] = useLocation();
@@ -219,22 +217,30 @@ export default function Agriculture() {
 
           <div className="max-w-4xl mx-auto">
             {isAuthenticated ? (
-              <VideoPlayer
-                videoSrc="/attached_assets/demo-video-3.mp4"
-                thumbnailSrc="/attached_assets/video-thumbnail-3.jpg"
-                title="Agriculture Solutions Demo"
-              />
+              <div className="relative aspect-video bg-muted rounded-xl flex items-center justify-center">
+                <img
+                  src="/jpeg (1)_1757147128009.jpeg"
+                  alt="Smart Agriculture Platform"
+                  className="w-full h-full object-cover rounded-xl"
+                />
+                <div className="absolute inset-0 flex flex-col items-center justify-center bg-black bg-opacity-40 rounded-xl p-4">
+                  <Play className="h-12 w-12 text-white mb-4" />
+                  <p className="text-white text-xl font-medium text-center px-4">
+                    Smart Agriculture Demo
+                  </p>
+                </div>
+              </div>
             ) : (
               <div className="relative aspect-video bg-muted rounded-xl flex items-center justify-center">
                 <img
-                  src="/attached_assets/video-thumbnail-3.jpg"
-                  alt="Agriculture Solutions Demo"
+                  src="/jpeg (1)_1757147128009.jpeg"
+                  alt="Smart Agriculture Platform"
                   className="w-full h-full object-cover rounded-xl opacity-50"
                 />
                 <div className="absolute inset-0 flex flex-col items-center justify-center bg-black bg-opacity-40 rounded-xl p-4">
                   <Play className="h-12 w-12 text-white mb-4" />
                   <p className="text-white text-xl font-medium text-center px-4 mb-6">
-                    Sign in to watch the full demo video
+                    Sign in to watch the full demo
                   </p>
                   <Button
                     onClick={handleWatchDemo}

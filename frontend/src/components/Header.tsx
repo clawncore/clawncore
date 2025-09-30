@@ -1,12 +1,21 @@
-import React, { useState } from 'react';
-import { useLocation, Link } from 'wouter';
-import { ThemeToggle } from '@/components/ui/theme-toggle';
-import { Button } from '@/components/ui/button';
-import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
-import { FaBars, FaSun, FaMoon, FaInfoCircle, FaCogs, FaMobileAlt, FaDownload } from 'react-icons/fa';
+import { useState } from 'react';
+import { useLocation } from 'wouter';
 import { useTheme } from '@/contexts/ThemeContext';
 import { useAuth } from '@/contexts/AuthContext';
+import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
+import { Button } from '@/components/ui/button';
+import { Link } from 'wouter';
+import { ThemeToggle } from '@/components/ui/theme-toggle';
 import { AccountDropdown } from '@/components/AccountDropdown';
+import {
+  FaBars,
+  FaSun,
+  FaMoon,
+  FaInfoCircle,
+  FaCogs,
+  FaMobileAlt,
+  FaDownload
+} from 'react-icons/fa';
 
 const navigation = [
   { name: 'Home', href: '#home', type: 'scroll' },
@@ -21,7 +30,7 @@ const navigation = [
 ];
 
 export function Header() {
-  const [location, navigate] = useLocation();
+  const [] = useLocation();
   const [isOpen, setIsOpen] = useState(false);
   const { theme, toggleTheme } = useTheme();
   const { isAuthenticated, openLoginModal } = useAuth();
